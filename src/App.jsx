@@ -239,22 +239,22 @@ export default function App() {
     for (let i = 0; i < retries; i += 1) {
       try {
         const response = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,
+          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
           {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               contents: [{ parts: [{ text: promptText }] }],
               systemInstruction: {
                 parts: [
                   {
-                    text: 'Kamu adalah guru SLB yang sangat ramah. Berikan cerita yang sangat amat singkat, manis, dan mudah dipahami anak.',
+                    text: "Kamu adalah guru SLB yang sangat ramah. Berikan cerita yang sangat amat singkat, manis, dan mudah dipahami anak.",
                   },
                 ],
               },
             }),
           },
-        )
+        );
 
         if (!response.ok) throw new Error('API Error')
 

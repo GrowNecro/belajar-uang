@@ -1,0 +1,14 @@
+{
+  "contents": [
+    {
+      "parts": [
+        { "text": "Halo" }
+      ]
+    }
+  ],
+  "systemInstruction": {
+    "parts": [
+      { "text": "You are a helpful assistant." }
+    ]
+  }
+}
