@@ -24,3 +24,37 @@ VITE_GEMINI_API_KEY=your_api_key_here
 ```
 
 You can copy that into `.env.example` and fill in your own key locally.
+
+## Panduan Setup untuk Pemula
+
+Langkah singkat untuk menjalankan proyek ini di komputer Anda (Windows / macOS / Linux):
+
+- 1) Pasang Node.js (pilih versi LTS):
+	- Windows: Unduh installer dari https://nodejs.org dan jalankan.
+	- macOS: Gunakan Homebrew: `brew install node` atau unduh installer dari situs resmi.
+	- Linux (Ubuntu/Debian):
+		```bash
+		curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+		sudo apt-get install -y nodejs
+		```
+
+- 2) Buka terminal, masuk ke folder proyek `belajar-uang`:
+	```bash
+	cd d:/WebDev/www/mediapemuang/belajar-uang
+	```
+
+- 3) Pasang dependensi dan jalankan server dev:
+	```bash
+	npm install
+	npm run dev
+	```
+
+- 4) Set `.env` lokal untuk API (jangan commit `.env`):
+	- Buat file `.env` di folder `belajar-uang` dan tambahkan:
+		```bash
+		VITE_GEMINI_API_KEY=your_api_key_here
+		```
+
+- 5) Akses aplikasi di browser pada alamat yang ditampilkan oleh `npm run dev` (biasanya `http://localhost:5173`).
+
+Catatan keamanan: Jangan memasukkan API key ke repo publik. Jika key tersebar, segera rotasi/regen di Google Cloud Console.
